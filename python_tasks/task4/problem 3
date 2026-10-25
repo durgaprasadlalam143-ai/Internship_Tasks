@@ -1,0 +1,18 @@
+Question: Division Operators
+Write a Python program to read two integers and print the result of integer division (//) and float division (/) on separate lines.
+Code
+a = int(input())
+b = int(input())
+print(a // b)
+print(a / b)
+
+
+
+Sample Input
+4
+3
+
+
+Output
+1
+1.3333333333333333
