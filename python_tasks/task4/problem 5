@@ -1,0 +1,15 @@
+Question: Print Numbers Without Spaces
+Write a Python program to print numbers from 1 to n consecutively, without spaces and without using string methods.
+Code
+n = int(input())
+for i in range(1, n + 1):
+     print(i, end="")
+
+
+
+Sample Input
+3
+
+
+Output
+123
