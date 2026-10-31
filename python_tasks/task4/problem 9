@@ -1,0 +1,33 @@
+Question
+You are given a string, an index position, and a character.
+Your task is to replace the character at the given index with the new character and print the modified string.
+
+2. Instructions 
+1. Define a function called mutate_string.
+2. Accept three parameters: string, position, and character.
+3. Convert the string into a list using list().
+4. Replace the character at the given index.
+5. Convert the list back into a string using join().
+6. Return the modified string.
+7. Read the input and call the function.
+
+code:
+def mutate_string(string, position, character):
+    l = list(string)
+    l[position] = character
+    string = ''.join(l)
+    return string
+
+if __name__ == '__main__':
+    s = input()
+    i, c = input().split()
+    s_new = mutate_string(s, int(i), c)
+    print(s_new)
+
+Input :
+abracadabra
+5 k
+
+
+Output :
+abrackdabra
