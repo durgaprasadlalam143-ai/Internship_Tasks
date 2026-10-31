@@ -1,0 +1,23 @@
+Question :
+You are given a first name and last name on two separate lines.
+
+Print the following message:
+
+Hello firstname lastname! You just delved into python.
+
+Code : 
+def print_full_name(first, last):
+    print(f"Hello {first} {last}! You just delved into python.")
+
+if __name__ == '__main__':
+    first = input()
+    last = input()
+    print_full_name(first, last)
+
+Input :
+Ross
+Taylor
+
+Output :
+Hello Ross Taylor! You just delved into python.
+
