@@ -1,0 +1,23 @@
+Question
+You are given a string containing words separated by spaces.
+
+Intructions
+1. Split the string using spaces.
+2. Join the words using a hyphen (-).
+
+Code
+def split_and_join(line):
+    words = line.split(" ")
+    result = "-".join(words)
+    return result
+
+if __name__ == '__main__':
+    line = input()
+    result = split_and_join(line)
+    print(result)
+
+Input
+this is a string
+
+Output
+this-is-a-string
