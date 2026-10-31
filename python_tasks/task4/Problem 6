@@ -1,0 +1,35 @@
+Question: Find the Runner-Up Score
+Given the participants' scores in a university sports competition, find the runner-up score.
+
+You are given the scores. Store them in a list and print the second-highest unique score.
+
+Instructions:
+# Step 1: Read the number of participants.
+# Step 2: Read the scores and store them in a list.
+# Step 3: Remove duplicate scores using set().
+# Step 4: Sort the unique scores in descending order.
+# Step 5: Print the second-highest score.
+
+n = int(input())
+
+scores = list(map(int, input().split()))
+
+highest = scores[0]
+second = None
+
+for num in scores:
+    if num > highest:
+        second = highest
+        highest = num
+
+    elif num < highest:
+        if second is None or num > second:
+            second = num
+
+print(second)
+
+Input
+2 3 6 6 5
+
+Ouput
+5
