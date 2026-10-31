@@ -1,0 +1,42 @@
+Question
+You are given a string and a substring.
+
+Your task is to count how many times the substring appears in the original string.
+
+Important: Count occurrences from left to right. The characters are case-sensitive.
+
+Instructions :
+1. Define a function called count_substring.
+2. Accept two parameters: string and sub_string.
+3. Create a variable count and initialize it to 0.
+4. Use a for loop to traverse the original string.
+5. Check whether the substring matches the characters starting at the current index.
+6. If it matches, increase count by 1.
+7. Return the final count.
+8. Read the input and print the function result.
+
+def count_substring(string, sub_string):
+    count = 0
+
+    for i in range(len(string) - len(sub_string) + 1):
+        if string[i:i + len(sub_string)] == sub_string:
+            count += 1
+
+    return count
+
+
+if __name__ == '__main__':
+    string = input().strip()
+    sub_string = input().strip()
+
+    count = count_substring(string, sub_string)
+    print(count)
+
+
+Input : 
+ABCDCDC
+CDC
+
+
+Output
+2
