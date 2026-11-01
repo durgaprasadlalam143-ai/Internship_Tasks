@@ -1,0 +1,62 @@
+Question 
+You are given the names and grades of students.
+
+Your task is to find the second lowest unique grade and print the names of all students who received that grade.
+
+If multiple students have the second lowest grade, print their names in alphabetical order.
+2. Step-by-step instructions
+1. Create an empty list called students.
+2. Read the number of students.
+3. Read each student's name and grade.
+4. Store each name and grade as a nested list inside students.
+5. Extract all grades from the list.
+6. Use set() to remove duplicate grades.
+7. Use sorted() to arrange the unique grades in ascending order.
+8. Select the second lowest grade using [1].
+9. Find the students who have that grade.
+10. Sort their names alphabetically and print each name.
+
+Python code
+n = int(input())
+
+students = []
+
+for i in range(n):
+    name = input()
+    score = float(input())
+    students.append([name, score])
+
+grades = sorted(set([score for name, score in students]))
+
+second_lowest = grades[1]
+
+names = []
+
+for name, score in students:
+    if score == second_lowest:
+        names.append(name)
+
+names.sort()
+
+for name in names:
+    print(name)
+
+
+
+Input
+5
+Harry
+37.21
+Berry
+37.21
+Tina
+37.2
+Akriti
+41
+Harsh
+39
+
+
+Output
+Berry
+Harry
