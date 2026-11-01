@@ -1,0 +1,48 @@
+Question
+You are given two sets of integers, a and b.
+
+Find the symmetric difference between them.
+
+Symmetric difference means:
+- Numbers present in set a but not in set b.
+- Numbers present in set b but not in set a.
+- Do not include numbers that exist in both sets.
+Finally, print the numbers in ascending order, one per line.
+
+Instructions
+1. Read the size of the first set.
+2. Read the first set of numbers and convert them into integers.
+3. Read the size of the second set.
+4. Read the second set of numbers and convert them into integers.
+5. Use symmetric_difference() to find the numbers that are not common to both sets.
+6. Use sorted() to arrange the numbers in ascending order.
+7. Print each number on a separate line.
+
+Python code
+m = int(input())
+a = set(map(int, input().split()))
+
+n = int(input())
+b = set(map(int, input().split()))
+
+result = sorted(a.symmetric_difference(b))
+
+for num in result:
+    print(num)
+
+
+Input
+4
+2 4 5 9
+4
+2 4 11 12
+
+
+Output
+5
+9
+11
+12
+
+
+6. Explanation
