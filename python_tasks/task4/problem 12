@@ -1,0 +1,40 @@
+question statement
+You are given a list of plant heights. Some heights are repeated.
+
+Your task is to:
+1. Remove duplicate heights using a set.
+2. Calculate the average of the distinct heights.
+3. Round the result to 3 decimal places.
+2. Step-by-step instructions
+1. Read the number of heights.
+2. Read all the heights as integers.
+3. Convert the list into a set() to remove duplicates.
+4. Use sum() to calculate the total of distinct heights.
+5. Use len() to count the distinct heights.
+6. Divide the total by the count.
+7. Use round() to round the answer to 3 decimal places.
+
+Python code
+def average(arr):
+    unique_heights = set(arr)
+    result = sum(unique_heights) / len(unique_heights)
+    return round(result, 3)
+
+
+n = int(input())
+arr = list(map(int, input().split()))
+
+print(average(arr))
+
+Input
+10
+161 182 161 154 176 170 167 171 170 174
+
+
+Output
+169.375
+
+
+
+
+After applying set(arr):
