@@ -1,0 +1,50 @@
+Question
+You are given students' names and their marks.
+
+Your task :
+1. Store each student's marks in a dictionary.
+2. Find the student whose name is given in query_name.
+3. Calculate that student's average marks.
+4. Print the average rounded to 2 decimal places.
+
+Instructions
+1. Read the number of students.
+2. Create an empty dictionary.
+3. Read each student's name and marks.
+4. Convert the marks into floating-point numbers using float.
+5. Store the name as the dictionary key and marks as the value.
+6. Read the name you want to search for.
+7. Get that student's marks from the dictionary.
+8. Calculate the average using sum() and len().
+9. Print the result using :.2f.
+
+Python code :
+n = int(input())
+
+student_marks = {}
+
+for i in range(n):
+    name, *line = input().split()
+    scores = list(map(float, line))
+    student_marks[name] = scores
+
+query_name = input()
+
+marks = student_marks[query_name]
+
+average = sum(marks) / len(marks)
+
+print(f"{average:.2f}")
+
+
+Input
+3
+Krishna 67 68 69
+Arjun 70 98 63
+Malika 52 56 60
+Malika
+
+
+Output
+56.00
+
