@@ -1,0 +1,39 @@
+Question
+You are given a string. Check whether it contains:
+1. Alphanumeric characters.
+2. Alphabetical characters.
+3. Digits.
+4. Lowercase characters.
+5. Uppercase characters.
+Print True or False for each condition.
+
+Instructions
+1. Read a string using input().
+2. Use isalnum() to check for letters or numbers.
+3. Use isalpha() to check for alphabetical characters.
+4. Use isdigit() to check for digits.
+5. Use islower() to check for lowercase characters.
+6. Use isupper() to check for uppercase characters.
+7. Use a for loop to check each character in the string.
+8. Print the result of each condition.
+
+Python Code
+s = input()
+
+print(any(c.isalnum() for c in s))
+print(any(c.isalpha() for c in s))
+print(any(c.isdigit() for c in s))
+print(any(c.islower() for c in s))
+print(any(c.isupper() for c in s))
+
+
+Input
+qA2
+
+
+Output
+True
+True
+True
+True
+True
