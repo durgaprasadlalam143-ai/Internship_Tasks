@@ -1,0 +1,40 @@
+Question 
+You are given the names of countries on several stamps.
+
+Your task is to find the total number of distinct countries.
+
+If a country appears multiple times, count it only once.
+2. Step-by-step instructions
+1. Read the total number of stamps.
+2. Create an empty set.
+3. Read each country name one by one.
+4. Use the .add() method to add each country to the set.
+5. Duplicate country names will not be added again.
+6. Use len() to count the distinct countries.
+7. Print the count.
+
+Python code
+n = int(input())
+
+countries = set()
+
+for i in range(n):
+    country = input()
+    countries.add(country)
+
+print(len(countries))
+
+
+Input
+7
+UK
+China
+USA
+France
+New Zealand
+UK
+France
+
+
+Output
+5
